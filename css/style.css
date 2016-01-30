@@ -1,0 +1,286 @@
+body{
+	font-size: 16px;
+	background-color: #F1F1F1;
+	font-family: Droid Sans, Arial, Verdana, Sans-Serif;
+}
+
+textarea, input { 
+	outline: none; 
+}
+
+h1{
+	text-align: center;
+}
+
+h2{
+	font-size: 18px;
+	display: inline;
+	margin: 0px 83px;
+}
+
+h3{
+    margin: 0px 0px 6px 0px;
+}
+
+h4{
+	margin: 0px;
+	font-size: 16px;
+}
+
+h5{
+	font-size: 20px;
+    margin: 0px 0px 5px 0px;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td, th{
+    text-align: center;
+   	padding: 5px;
+}
+
+table, th, td{
+	border: 1px solid #CACACA;
+}
+
+
+.hide{
+	display: none;
+}
+
+.hideOpacity{
+	transition: opacity 1s;
+	opacity: 0;
+}
+
+.showOpacity{
+	transition: opacity 0.2s;
+	opacity: 1;
+}
+
+#container{
+	width: 500px;
+    margin: 2px auto;
+    background-color: white;
+    padding: 5px 40px;
+    box-shadow: 0 0 3px #CACACA;
+}
+
+#tabs{
+	cursor: pointer;
+	border-bottom: 2px solid #D1D1D1;
+}
+
+.tab{
+	width: 50%;
+	display: block;
+	float: left;
+	padding-bottom: 7px;
+
+}
+
+.selectedTab{
+	border-bottom: 4px solid #f04e23;
+}
+
+
+#insertTags{
+	height: 37px;
+	border: none;
+	font-size: 16px;
+	background-color: white;
+	min-width: 50px;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+}
+
+#enteredTags{
+	float: left;
+}
+
+.tag{
+    border: 1px solid #CACACA;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 3px;
+    display: inline-block;
+}
+
+#inputField{
+    margin: 0 auto 5px auto;;
+    width: 487px;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 0 3px #CACACA;
+}
+
+.X{
+	color: #CACACA;
+	font-size: 12px;
+	font-family: helvetica;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#displayAllTags{
+	display: inline;
+	float: left;
+}
+
+#requestTag{
+	display: inline;
+	float: right;
+    margin: 2px 5px 0px 0px;
+}
+
+.submitForm{
+	float: right;
+}
+
+#formResults{
+	margin-bottom: 25px;
+}
+
+#videoResults, .tagResults{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.videoResult{
+    border: 1px solid #CACACA;
+    border-radius: 4px;
+    display: inline;
+    float: left;
+    width: 60%;
+    padding: 5px;
+	margin-top: 10px;
+}
+
+.tagResult{
+	display: inline;
+	float: left;
+	cursor: pointer;
+	color: #0c00b3;
+    margin: 3px 5px 3px 0px;
+}
+
+.tagResult:hover, .allTag:hover, #resetRequestForm{
+	text-decoration: underline;
+}
+
+#allTags{
+	margin-top: 5px;
+}
+
+.allTag{
+	width: 33%;
+	display: inline;
+	float: left;
+	list-style: none;
+	color: #0c00b3;
+	cursor: pointer;
+}
+
+.allTagAdmin{
+	width: 33%;
+	display: inline;
+	float: left;
+	list-style: none;
+}
+
+#requestTagContainer, #adminLoginContainer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(100, 100, 100, 0.7);
+}
+
+#requestTagFormContainer, #adminLoginFormContainer {
+    width: 300px;
+    margin: 60px auto 0px auto;
+    background-color: white;
+    padding: 1px 40px 30px 40px;;
+}
+
+#requestTagForm label, #requestTagForm input, #adminLoginForm label, #adminLoginForm input{
+	display: block;
+}
+
+#adminLoginForm label{
+	text-align: center;
+}
+
+#adminLoginForm input{
+	margin: 5px auto;
+}
+
+#requestTagForm input{
+	margin: 0px 0px 5px 0px;
+}
+
+#requestTagForm label, #adminLoginForm label{
+	margin: 10px 0px 2px 0px; 
+}
+
+#requestTagForm p, #adminLoginForm p{
+	margin: 0px 0px 2px 0px;
+}
+
+#closeRequestTag, #closeAdminLogin{
+	font-size: 25px;
+	display: inline;
+	margin: 2px 0px 0px -36px;
+	float: left;
+}
+
+#resetRequestForm{
+	text-align: center;
+	cursor: pointer;
+	color: #0c00b3;
+}
+
+#errorAlert{
+    box-shadow: 0 0 3px #CACACA;
+    border: 1px solid #CACACA;
+    padding: 3px;
+    position: absolute;
+    background-color: rgba(255,255,255,0.9);
+    margin-left: 20px;
+}
+
+#errorAlert p{
+	display: inline;
+    margin: 0px 0px 0px 5px;
+	font-size: 18px;
+}
+
+#errorAlert img{
+	display: inline;
+	width: 20px;
+	float: left;
+}
+
+#adminLogin{
+	text-align: center;
+    margin-top: 30px;
+    color: #0c00b3;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#adminRequests{
+	margin-top: 10px;
+}
+
+.leftAlign{
+	text-align: left;
+}
