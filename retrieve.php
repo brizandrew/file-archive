@@ -57,7 +57,7 @@ if (isset($_POST['tags'])) {
 				        ) AS results 
 					WHERE video_id =".$id.";";
 		$stmt = mysqli_query($conn, $query);
-		echo '<li class=videoResult><h3>Video ID: '.$id.'</h3><h4>Tags:</h4><ul class="tagResults">';
+		echo '<li class=videoResult><h3>File ID: '.$id.'</h3><h4>Tags:</h4><ul class="tagResults">';
 		while( $row = mysqli_fetch_assoc($stmt) ){
 			echo '<li class="tagResult">'.$row['tags']."</li>";
 		};

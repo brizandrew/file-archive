@@ -9,7 +9,6 @@ The file-archive is an SQL database dependent system that stores file references
 1. Install files on host server.
 2. Update variables in database.php with your server information.
 3. Update "password" variable inside admin.php to setup an admin password.
-4. (Optional) If using PHP 5.6+, delete "retrieve.php" and rename "retrieve_php5-6.php" to "retrieve.php".
 
 #### How It Works
 ##### Looking Up Files

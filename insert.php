@@ -43,7 +43,7 @@ if (isset($_POST['tags'])) {
 	//confirmation
 	echo "The following video has been added:";
 	echo '<ul id="videoResults">';
-	echo '<li class=videoResult><h3>Video ID: '.$video_id.'</h3><h4>Tags:</h4><ul class="tagResults">';
+	echo '<li class=videoResult><h3>File ID: '.$video_id.'</h3><h4>Tags:</h4><ul class="tagResults">';
 	foreach ($tags as $tag) {
 		echo '<li class="tagResult">'.stripslashes($tag)."</li>";
 	}
