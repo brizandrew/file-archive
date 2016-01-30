@@ -159,7 +159,7 @@ $.ajax({
             $("#videoId_Request").val(videoId);
         },
         error: function (jqXHR, status, err) {
-            alert("Error!");
+            throw new("Error: getLastFileId.php connect failure.");
         }
     });
 
@@ -175,7 +175,7 @@ $.ajax({
             });
         },
         error: function (jqXHR, status, err) {
-            alert("Error!");
+            throw new("Error: getLastFileId.php connect failure.");
         }
     });
 
@@ -192,7 +192,7 @@ $("#retrieveForm").on("submit", function(e) {
                 $(".tagResult").on("click", function(){addTag($(this).html())})
             },
             error: function (jqXHR, status, err) {
-                alert("Error!");
+                throw new("Error: retrieve.php connect failure.");
             }
         });
     }
@@ -202,7 +202,6 @@ $("#retrieveForm").on("submit", function(e) {
 //send insert request to the DB
 $("#insertForm").on("submit", function(e) {
     e.preventDefault();
-    console.log("test");
     if(prepareToSend()){
         $.ajax({
             url:  "insert.php",
@@ -213,7 +212,7 @@ $("#insertForm").on("submit", function(e) {
                 $(".tagResult").on("click", function(){addTag($(this).html())})
             },
             error: function (jqXHR, status, err) {
-                alert("Error!");
+                throw new("Error: insert.php connect failure.");
             }
         });
     }
@@ -233,7 +232,7 @@ $("#requestTagForm").on("submit", function(e) {
                 $("#requestFormResult").removeClass("hide");
             },
             error: function (jqXHR, status, err) {
-                alert("Error!");
+                throw new("Error: request.php connect failure.");
             }
         });
 });
@@ -264,18 +263,26 @@ $("#insertTab").on("click", function(){
 
 $("#requestTag").on("click", function(){
     $("#requestTagContainer").removeClass("hide");
+    if(window.innerWidth < 600)
+        $("#container").addClass("hide");
 });
 
 $("#closeRequestTag").on("click", function(){
     $("#requestTagContainer").addClass("hide");
+    if(window.innerWidth < 600)
+        $("#container").removeClass("hide");
 });
 
 $("#adminLogin").on("click", function(){
     $("#adminLoginContainer").removeClass("hide");
+    if(window.innerWidth < 600)
+        $("#container").addClass("hide");
 });
 
 $("#closeAdminLogin").on("click", function(){
     $("#adminLoginContainer").addClass("hide");
+    if(window.innerWidth < 600)
+        $("#container").removeClass("hide");
 });
 
 resetInputSize();

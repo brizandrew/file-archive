@@ -284,3 +284,14 @@ table, th, td{
 .leftAlign{
 	text-align: left;
 }
+
+@media (max-width: 600px) {
+	#requestTagContainer, #adminLoginContainer{
+		background-color: white;
+	}
+
+	.allTag, .allTagAdmin{
+		width: 50%;
+		font-size: 25px;
+	}
+}
