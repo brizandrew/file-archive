@@ -151,7 +151,7 @@ INPUT_MIN_WIDTH = parseInt($("#insertTags").css("min-width").substring(0,$("#ins
 
 //retrieve the id of the next video to insert
 $.ajax({
-        url:  "getLastVideoId.php",
+        url:  "getLastFileId.php",
         type: "POST",
         success: function(html) {
             videoId = parseInt(html) + 1;
